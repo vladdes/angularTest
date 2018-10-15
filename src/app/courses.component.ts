@@ -6,7 +6,7 @@ import { CoursesService } from './courses.service';
             <h2>{{ getTitle() }}</h2>
             <img src="{{imageUrl}}" /><br/>
             <img [src]="imageUrl" />
-            <table>
+            <table class="table">
                 <tr>
                     <td [attr.colspan]="colSpan">hej </td>
                 </tr>
@@ -14,7 +14,8 @@ import { CoursesService } from './courses.service';
             <button class="btn btn-primary" 
                 [class.active]="isActive" 
                 [style.backgroundColor]="isActive ? 'blue' : 'red'"
-                (click)="onSave($event)" > Save </button>
+                (click)="onSave($event)"
+                > Save </button>
                
                 <input [(ngModel)]="email" (keyup.enter)="onKeyUp()" />
             `
