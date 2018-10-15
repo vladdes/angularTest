@@ -13,8 +13,10 @@ import { CoursesService } from './courses.service';
             </table>
             <button class="btn btn-primary" 
                 [class.active]="isActive" 
-                [style.backgroundColor]="isActive ? 'blue' : 'red' "
-                (click)="onSave($event)" >Save</button>
+                [style.backgroundColor]="isActive ? 'blue' : 'red'"
+                (click)="onSave($event)" > Save </button>
+               
+                <input [(ngModel)]="email" (keyup.enter)="onKeyUp()" />
             `
 })
 
@@ -24,6 +26,7 @@ export class CoursesComponent {
     imageUrl: string = "https://avatars2.githubusercontent.com/u/7382715?s=460&v=4";
     colSpan;
     isActive: boolean = false;
+    email = "jey";
 
     constructor(service: CoursesService){
         this.courses = service.getCourses();
@@ -32,7 +35,12 @@ export class CoursesComponent {
     getTitle(){
         return this.title;
     }
+    onKeyUp(){
+        
+        console.log(this.email);
+    }
     onSave($event){
+        $event.stopPropagation(); //stops bubling
         console.log("click", $event);
     }
 }

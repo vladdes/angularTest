@@ -6,6 +6,7 @@ import { CoursesService } from './courses.service';
 import { AppComponent } from './app.component';
 import { CourseComponent } from './course/course.component';
 import { AuthorsComponent } from './authors/authors.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,8 +16,8 @@ import { AuthorsComponent } from './authors/authors.component';
     AuthorsComponent
   ],
   imports: [
-  
-BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [
     CoursesService,
