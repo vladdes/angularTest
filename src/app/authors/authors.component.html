@@ -4,8 +4,9 @@
     {{author}}
   </li>
 </ul>
-<h3>Ttile: {{ course.title | uppercase }}</h3>
+<h3>Ttile: {{ course.title | titlecase }}</h3>
 <p>rating: {{ course.rating | number:'1.2-2' }}</p>
 <p>students: {{ course.students | number }}</p>
 <p>students: {{ course.price | currency:'SEK':'true':'3.2-2' }}</p>
 <p>students: {{ course.releaseDate | date:'dd/MM/yy' }}</p>
+<p>random text: {{randomText | summary:10}}</p>

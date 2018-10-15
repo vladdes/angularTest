@@ -15,6 +15,8 @@ export class AuthorsComponent implements OnInit {
     price: 190.3055,
     releaseDate: new Date(2018, 10, 1)
   }
+
+  randomText = `Lorem bacon bacon bacon bacon, life is bacon`;
   constructor(service: AuthorsService) {
     this.authors = service.getAuthors();
   }
