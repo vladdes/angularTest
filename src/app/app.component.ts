@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { IIsFavoriteChangedEvent } from './favorite/favorite.component';
+
 
 @Component({
   selector: 'app-root',
@@ -10,5 +12,9 @@ export class AppComponent {
   post = {
     title: 'title',
     isFavorite: true
+  }
+
+  onFavoriteChanged(isFavorite: IIsFavoriteChangedEvent){
+    console.log(isFavorite.newValue);
   }
 }

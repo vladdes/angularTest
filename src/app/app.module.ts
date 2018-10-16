@@ -9,14 +9,19 @@ import { CourseComponent } from './course/course.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { FormsModule } from '@angular/forms';
 import { FavoriteComponent } from './favorite/favorite.component';
+import { PanelComponent } from './panel/panel.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    PanelComponent,
     CoursesComponent,
     CourseComponent,
     AuthorsComponent, 
-    SummaryPipe, FavoriteComponent
+    SummaryPipe, 
+    FavoriteComponent
   ],
   imports: [
     BrowserModule,
