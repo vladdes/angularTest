@@ -8,13 +8,20 @@ import { IIsFavoriteChangedEvent } from './favorite/favorite.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Test';
-  post = {
-    title: 'title',
-    isFavorite: true
-  }
+  courses = [1];
 
-  onFavoriteChanged(isFavorite: IIsFavoriteChangedEvent){
-    console.log(isFavorite.newValue);
-  }
+  // title = 'Test';
+  // post = {
+  //   title: 'title',
+  //   isFavorite: true
+  // }
+  // tweet = {
+  //   body: '..',
+  //   likesCount: 10,
+  //   isLiked: true
+  // }
+
+  // onFavoriteChanged(isFavorite: IIsFavoriteChangedEvent){
+  //   console.log(isFavorite.newValue);
+  // }
 }

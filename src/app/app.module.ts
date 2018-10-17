@@ -10,6 +10,7 @@ import { AuthorsComponent } from './authors/authors.component';
 import { FormsModule } from '@angular/forms';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { PanelComponent } from './panel/panel.component';
+import { LikeComponent } from './like/like.component';
 
 
 
@@ -21,7 +22,8 @@ import { PanelComponent } from './panel/panel.component';
     CourseComponent,
     AuthorsComponent, 
     SummaryPipe, 
-    FavoriteComponent
+    FavoriteComponent, 
+    LikeComponent
   ],
   imports: [
     BrowserModule,

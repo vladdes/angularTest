@@ -1,7 +1,31 @@
-<h1>Angular</h1>
-<authors></authors>
-<courses></courses>
-<favorite [is-favorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></favorite>
+<div id="appComp">
+    <div *ngIf="courses.length > 0; then coursesList else noCourses">
+        list of courses
+    </div>
+    <ng-template #coursesList>
+        List of courses
+    </ng-template>
+    <ng-template #noCourses>
+        empty
+    </ng-template>
+    <!-- <div>
+        <h1>Angular</h1>
+        <authors></authors>
+        <like-like
+        [likesCount]="tweet.likesCount"
+        [isActive]="tweet.isLiked">
 
-<panel><div class="heading">adfgdh HEADUING</div>
-    <div class="body">blargh BODY</div></panel>
+        </like-like>
+    </div>
+    
+
+    <div>
+            <courses></courses>
+        <favorite [is-favorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></favorite>
+
+        <panel>
+            <ng-container class="heading">adfgdh HEADUING</ng-container>
+            <ng-container class="body">blargh BODY</ng-container>
+        </panel>
+    </div> -->
+</div>
